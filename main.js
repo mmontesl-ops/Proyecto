@@ -1,9 +1,9 @@
 // Arreglo de datos para las experiencias de DATE BOX
 let listaCombos = [
-  { id: 1, nombre: "Box Romance Premium (Champaña & Bombones)", categoria: "Champaña y Dulces", precio: 380.00, stock: 6, imagen: "combo1.jpeg" },
-  { id: 2, nombre: "Box Friends Night Out (Snacks & Compartir)", categoria: "Para Amigos / Compartir", precio: 250.00, stock: 10, imagen: "producto.amigos.jpeg" },
+  { id: 1, nombre: "Box Romance Premium (Champaña & Bombones)", categoria: "Champaña y Dulces", precio: 200.00, stock: 6, imagen: "combo1.jpeg" },
+  { id: 2, nombre: "Box Friends Night Out (Snacks & Compartir)", categoria: "Para Amigos / Compartir", precio: 175.00, stock: 10, imagen: "producto.amigos.jpeg" },
   { id: 3, nombre: "Box Sweet Date (Mix de Golosinas & Globos)", categoria: "Golosinas Mix", precio: 145.00, stock: 15, imagen: "mix.jpeg" },
-  { id: 4, nombre: "Box Picnic Chic (Vino Tinto, Quesos & Galletas)", categoria: "Edición Especial", precio: 320.00, stock: 4, imagen: "parejas.jpeg" }
+  { id: 4, nombre: "Box Picnic Chic (Vino Tinto, Quesos & Galletas)", categoria: "Edición Especial", precio: 200.00, stock: 4, imagen: "parejas.jpeg" }
 ];
 
 let carrito = [];
