@@ -1,4 +1,4 @@
-// Arreglo de datos para las experiencias de DATE BOX
+// Arreglo de datos para las experiencias de DATE BOX con tus precios originales
 let listaCombos = [
   { id: 1, nombre: "Box Romance Premium (Champaña & Bombones)", categoria: "Champaña y Dulces", precio: 200.00, stock: 6, imagen: "combo1.jpeg" },
   { id: 2, nombre: "Box Friends Night Out (Snacks & Compartir)", categoria: "Para Amigos / Compartir", precio: 175.00, stock: 10, imagen: "producto.amigos.jpeg" },
@@ -17,7 +17,7 @@ function actualizarInterfaz() {
   renderizarCarrito();
 }
 
-// Renderiza los productos dentro del contenedor idéntico al de referencia
+// Renderiza los productos dentro del catálogo
 function renderarCatalogo() {
   const contenedor = document.getElementById("contenedor-productos");
   contenedor.innerHTML = "";
@@ -25,12 +25,13 @@ function renderarCatalogo() {
   listaCombos.forEach(combo => {
     const tarjeta = document.createElement("div");
     tarjeta.className = "tarjeta-combo";
+    // Mantiene el ID dinámico para que los enlaces de la barra de categorías funcionen al hacer clic
+    tarjeta.id = `box-${combo.id}`; 
     
     const estaAgotado = combo.stock === 0;
     const textoBoton = estaAgotado ? "Agotado" : "Agregar al Carrito";
     const estiloAtributo = estaAgotado ? "disabled style='opacity: 0.5; background-color: #ccc; cursor: not-allowed;'" : "";
 
-    // SE CORRIGIÓ AQUÍ: Agregamos la etiqueta img apuntando a combo.imagen
     tarjeta.innerHTML = `
       <img src="${combo.imagen}" alt="${combo.nombre}" class="imagen-producto">
       <h3>${combo.nombre}</h3>
