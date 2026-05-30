@@ -1,0 +1,191 @@
+:root {
+  --bg-principal: #f7f4ee;      
+  --bg-tarjetas: #ffffff;       
+  --texto-oscuro: #3a3530;      
+  --acento-coral: #d47a5f;      
+  --acento-cafe: #806854;       
+  --acento-claro: #e6dfd3;      
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: var(--bg-principal);
+  color: var(--texto-oscuro);
+  line-height: 1.6;
+}
+
+
+header {
+  background-color: var(--bg-tarjetas);
+  padding: 20px 5%;
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  border-bottom: 2px solid var(--acento-claro);
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+}
+
+.imagen-logo {
+  max-width: 550px; 
+  height: flex;
+  display: block;
+}
+
+
+.contenedor-principal {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+section {
+  background-color: var(--bg-tarjetas);
+  padding: 35px; 
+  margin-bottom: 45px; 
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+}
+
+.seccion-presentacion {
+  text-align: center;
+}
+
+.seccion-presentacion h1 {
+  color: var(--acento-coral);
+  font-size: 2.8rem;
+  letter-spacing: 2px;
+  margin-bottom: 5px;
+}
+
+.seccion-presentacion h3 {
+  color: var(--acento-cafe);
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+
+.seccion-catalogo {
+  margin-top: 50px;     
+  margin-bottom: 60px;  
+  padding: 40px;        
+}
+
+h2 {
+  color: var(--acento-cafe);
+  margin-bottom: 30px; 
+  border-bottom: 1px solid var(--acento-claro);
+  padding-bottom: 15px;
+}
+
+
+.productos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 35px; 
+  margin-top: 25px;
+}
+
+.tarjeta-combo {
+  background-color: var(--bg-principal);
+  border: 1px solid var(--acento-claro);
+  border-radius: 8px;
+  padding: 25px; 
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.tarjeta-combo:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+}
+
+.tarjeta-combo h3 {
+  color: var(--texto-oscuro);
+  margin-bottom: 10px;
+}
+
+.precio-tag {
+  font-size: 1.4rem;
+  color: var(--acento-coral);
+  font-weight: bold;
+  margin: 15px 0;
+}
+
+.boton-agregar, .boton-comprar {
+  background-color: var(--acento-cafe);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  width: 100%;
+  transition: background-color 0.2s;
+}
+
+.boton-agregar:hover {
+  background-color: var(--acento-coral);
+}
+
+.boton-comprar {
+  background-color: var(--acento-coral);
+  margin-top: 20px;
+}
+
+.boton-comprar:hover {
+  background-color: #b86249;
+}
+
+/* Panel de Compra / Carrito */
+.panel-control {
+  max-width: 650px;
+  margin: 0 auto 40px auto;
+}
+
+.item-carrito {
+  display: flex;
+  justify-content: space-between;
+  padding: 14px 0;
+  border-bottom: 1px dashed var(--acento-claro);
+}
+
+.carrito-vacio {
+  color: #888;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.total-carrito {
+  margin-top: 25px;
+  text-align: right;
+  font-size: 1.4rem;
+  display: block;
+  color: var(--texto-oscuro);
+}
+
+footer {
+  text-align: center;
+  padding: 30px;
+  background-color: var(--bg-tarjetas);
+  border-top: 2px solid var(--acento-claro);
+  margin-top: 60px;
+}
+/* Estilo para que la imagen del combo salga pequeña y centrada */
+.imagen-producto {
+  width: 300px;           /* Ancho pequeño y controlado */
+  height: 250px;          /* Alto igual al ancho para que sea simétrica */
+  object-fit: cover;      /* Evita que la imagen se deforme */
+  border-radius: 8%;     /* Hace que la imagen sea completamente redonda (puedes quitarlo o cambiarlo a 8px si prefieres cuadrada) */
+  margin: 0 auto 15px auto; /* Centra la imagen horizontalmente y le da espacio abajo */
+  display: block;         /* Permite que el centrado con margin: auto funcione correctamente */
+  border: 2px solid var(--acento-claro); /* Un pequeño borde sutil que combina con el estilo beige */
+}
